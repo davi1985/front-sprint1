@@ -1,0 +1,19 @@
+<span class="header__menu" aria-expanded="true" id="menu-mobile">
+        <img src="assets/menu.svg" alt="" class="header__menu-open" />
+        <img src="assets/close.svg" alt="" class="header__menu-close" />
+      </span>
+
+      <div class="header__logo">
+        <h1>
+          <img src="assets/rchlo.svg" alt="" class="header__logo-mobile" />
+        </h1>
+
+        <h1>
+          <img src="assets/riachuelo.svg" alt="" class="header__logo-desktop" />
+        </h1>
+      </div>
+
+      <div class="header__input">
+        <img src="assets/search.svg" alt="" class="header__searchIcon" />
+        <input type="search" placeholder="O quê você está procurando?" />
+      </div>

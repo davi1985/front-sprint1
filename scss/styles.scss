@@ -1,3 +1,61 @@
-body {
-  color: red;
+// colors
+$bg-white: #fff;
+$font-color-primary: rgba(0, 0, 0, 0.9);
+$font-input: rgba(0, 0, 0, 0.26);
+$breadcrumb-font-color: #585858;
+$filters-bg: rgba(38, 30, 30, 0.04);
+$border-color: rgba(0, 0, 0, 0.2);
+
+* {
+  box-sizing: border-box;
 }
+
+input,
+body {
+  font-family: "Arboria ☞", sans-serif;
+}
+
+.container {
+  padding: 0 3rem;
+}
+
+@mixin img-size {
+  width: 24px;
+  height: 24px;
+}
+
+@mixin flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-around-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@import "_header", "_main", "_footer";

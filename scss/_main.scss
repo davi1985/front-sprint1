@@ -1,0 +1,131 @@
+main {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  .breadcrumbs {
+    &__nav {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      width: 100%;
+      padding-top: 0.5rem;
+      padding-bottom: 1rem;
+      font-size: 0.8125rem;
+      font-weight: bold;
+    }
+
+    &__list {
+      display: flex;
+
+      a {
+        text-decoration: none;
+        color: $breadcrumb-font-color;
+        cursor: pointer;
+      }
+
+      li + li {
+        margin-left: 1rem;
+
+        &::before {
+          content: "/";
+          margin-right: 1rem;
+        }
+      }
+
+      li:last-child {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .filters {
+    &__list {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      display: flex;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+
+      li {
+        cursor: pointer;
+        padding: 1rem 0.9rem;
+        display: flex;
+        position: relative;
+        align-items: center;
+        transition: all 0.2s;
+
+        &:after {
+          content: url(../assets/filter.svg);
+          display: block;
+          width: 24px;
+          margin-left: 10px;
+        }
+
+        &:hover {
+          background-color: $filters-bg;
+        }
+      }
+    }
+  }
+
+  .products {
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      li {
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        width: 100%;
+        max-width: 270px;
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &:hover {
+          box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+            0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+        }
+
+        img {
+          width: 100%;
+          max-width: 272px;
+        }
+
+        p {
+          font-size: 0.6875rem;
+          padding: 1rem 0.5rem;
+          text-transform: uppercase;
+          text-align: center;
+          line-height: 1.5;
+          letter-spacing: 0.1rem;
+        }
+
+        p:last-child {
+          font-weight: 600;
+          padding: 0.5rem;
+          color: $font-color-primary;
+          font-size: 0.8125rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .breadcrumbs {
+      display: none;
+    }
+
+    .filters {
+      display: none;
+    }
+
+    .products__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

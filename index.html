@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Riachuelo</title>
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <script>
@@ -18,13 +19,27 @@
     </script>
   </head>
   <body>
-    <header>
-      <h1>
-        <img src="assets/riachuelo.svg" alt="" />
-      </h1>
-      <input type="search" placeholder="O quê você está procurando" />
-      <nav>
-        <ul>
+    <header class="header container">
+      <span class="header__menu"></span>
+
+      <div class="header__logo">
+        <h1>
+          <img src="assets/rchlo.svg" alt="" class="header__logo-mobile" />
+        </h1>
+
+        <h1>
+          <img src="assets/riachuelo.svg" alt="" class="header__logo-desktop" />
+        </h1>
+      </div>
+
+      <div class="header__input">
+        <img src="assets/search.svg" alt="" class="header__searchIcon" />
+        <input type="search" placeholder="O quê você está procurando?" />
+      </div>
+      
+<!-- TODO: Javascript: add mobile class, remove header__nav -->
+      <nav >
+        <ul class="header__nav">
           <li><a href="">Novidades</a></li>
           <li><a href="">Feminimo</a></li>
           <li><a href="">Masculino</a></li>
@@ -40,10 +55,27 @@
         </ul>
       </nav>
     </header>
+
+    <nav class="mobile">
+      <ul class="mobile__nav">
+        <li><a href="">Novidades</a></li>
+        <li><a href="">Feminimo</a></li>
+        <li><a href="">Masculino</a></li>
+        <li><a href="">Infantil</a></li>
+        <li><a href="">Moda Íntima</a></li>
+        <li><a href="">Calçados</a></li>
+        <li><a href="">Acessórios e Relógios</a></li>
+        <li><a href="">Beleza e Perfume</a></li>
+        <li><a href="">Casa Riachuelo</a></li>
+        <li><a href="">Eletrônicos</a></li>
+        <li><a href="">Personagens</a></li>
+        <li><a href="">Outlet</a></li>
+      </ul>
+    </nav>
     <main>
-      <section class="breadcrumbs">
-        <nav>
-          <ol>
+      <section class="breadcrumbs container">
+        <nav class="breadcrumbs__nav">
+          <ol class="breadcrumbs__list">
             <li><a href="">Home</a></li>
             <li><a href="">Infantil</a></li>
             <li><a href="">Personagens</a></li>
@@ -51,8 +83,8 @@
           </ol>
         </nav>
       </section>
-      <section class="filters">
-        <ul>
+      <section class="filters container">
+        <ul class="filters__list">
           <li>Tamanho</li>
           <li>Cor</li>
           <li>Departamento</li>
@@ -61,8 +93,8 @@
         </ul>
       </section>
 
-      <section class="products">
-        <ol>
+      <section class="products container">
+        <ol class="products__list">
           <li>
             <div>
               <img src="assets/c1.webp" alt="Camisa 1" />
@@ -174,137 +206,167 @@
         </ol>
       </section>
     </main>
-    <footer>
-      <div class="offers">
-        <p>Receba ofertas e novidades por e-mail</p>
-        <form action="/">
-          <input type="email" placeholder="Digite aqui seu e-mail" />
-          <button type="submit">Cadastrar</button>
-        </form>
-      </div>
-      <div class="mobile-apps">
-        <p>Baixe nosso App</p>
-        <img src="assets/google-play.webp" alt="Google Play" />
-        <img src="assets/app-store.webp" alt="App Store" />
-      </div>
-      <div class="contacts">
-        <div>
-          <img width="50px" src="assets/ico-attendance.svg" alt="Atendimento" />
-          <p>Atendimento</p>
+
+    <footer class="footer">
+      <div class="footer__items container">
+        <div class="footer__offers">
+          <p>Receba ofertas e novidades por e-mail</p>
+          <form action="/">
+            <input type="email" placeholder="Digite aqui seu e-mail" />
+            <button type="submit">Cadastrar</button>
+          </form>
         </div>
-        <div>
-          <img
-            width="50px"
-            src="assets/ico-faq.svg"
-            alt="Perguntas Frequentes"
-          />
-          <p>Perguntas Frequentes</p>
-        </div>
-        <div>
-          <img
-            width="50px"
-            src="assets/ico-invoice-and-statement.svg"
-            alt="Fatura e Extrato"
-          />
-          <p>Fatura e Extrato</p>
-        </div>
-        <div>
-          <img
-            width="50px"
-            src="assets/ico-work-with-us.svg"
-            alt="Trabalhe Conosco"
-          />
-          <p>Trabalhe Conosco</p>
+        <div class="footer__mobile-apps">
+          <p>Baixe nosso App</p>
+          <img src="assets/google-play.webp" alt="Google Play" />
+          <img src="assets/app-store.webp" alt="App Store" />
         </div>
       </div>
-      <div class="links">
-        <ul>
-          <li>
-            <div>
-              <h3>Cartão Riachuelo</h3>
-              <ul>
-                <li><a href="">Midway Financeira</a></li>
-                <li><a href="">Saiba como adquirir</a></li>
-                <li><a href="">Veja sua fatura e extrato</a></li>
-                <li><a href="">Buscando quitar suas dívidas?</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Sobre a Riachuelo</h3>
-              <ul>
-                <li><a href="">A Empresa</a></li>
-                <li><a href="">Portal de Fornecedores</a></li>
-                <li><a href="">Relação com Investidores</a></li>
-                <li><a href="">Assessoria de Imprensa</a></li>
-                <li><a href="">Trabalhe Conosco</a></li>
-                <li><a href="">Programa Jovem Aprendiz</a></li>
-                <li><a href="">Cadastro de Startups</a></li>
-                <li><a href="">Mapa do Site</a></li>
-                <li><a href="">Guide Shop</a></li>
-                <li><a href="">Venda na Riachuelo Marketplace</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Moda que Transforma</h3>
-              <ul>
-                <li><a href="">Na prática</a></li>
-                <li><a href="">Entre Costuras</a></li>
-                <li><a href="">Jeans Mais Transparente</a></li>
-                <li><a href="">Ações Covid-19</a></li>
-                <li><a href="">Free Free</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div>
-              <h3>Ajuda</h3>
-              <ul>
-                <li><a href="">Atendimento</a></li>
-                <li><a href="">Perguntas Frequentes</a></li>
-                <li><a href="">Trocas e Devoluções</a></li>
-                <li><a href="">Portal da Privacidade</a></li>
-                <li><a href="">Política de Privacidade</a></li>
-                <li><a href="">Termos e Condições de Uso</a></li>
-                <li><a href="">Regras e Resultados de Sorteios</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+
+      <div class="footer__footer container">
+        <div class="footer__contacts">
+          <div>
+            <img
+              width="50px"
+              src="assets/ico-attendance.svg"
+              alt="Atendimento"
+            />
+            <p>Atendimento</p>
+          </div>
+          <div>
+            <img
+              width="50px"
+              src="assets/ico-faq.svg"
+              alt="Perguntas Frequentes"
+            />
+            <p>Perguntas Frequentes</p>
+          </div>
+          <div>
+            <img
+              width="50px"
+              src="assets/ico-invoice-and-statement.svg"
+              alt="Fatura e Extrato"
+            />
+            <p>Fatura e Extrato</p>
+          </div>
+          <div>
+            <img
+              width="50px"
+              src="assets/ico-work-with-us.svg"
+              alt="Trabalhe Conosco"
+            />
+            <p>Trabalhe Conosco</p>
+          </div>
+        </div>
+
+        <div class="footer__links">
+          <ul style="flex-direction: column;">
+            <li>
+              <div class="footer__full">
+                <h3>Cartão Riachuelo</h3>
+                <ul>
+                  <li><a href="">Midway Financeira</a></li>
+                  <li><a href="">Saiba como adquirir</a></li>
+                  <li><a href="">Veja sua fatura e extrato</a></li>
+                  <li><a href="">Buscando quitar suas dívidas?</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="footer__full">
+                <h3>Sobre a Riachuelo</h3>
+                <ul>
+                  <li><a href="">A Empresa</a></li>
+                  <li><a href="">Portal de Fornecedores</a></li>
+                  <li><a href="">Relação com Investidores</a></li>
+                  <li><a href="">Assessoria de Imprensa</a></li>
+                  <li><a href="">Trabalhe Conosco</a></li>
+                  <li><a href="">Programa Jovem Aprendiz</a></li>
+                  <li><a href="">Cadastro de Startups</a></li>
+                  <li><a href="">Mapa do Site</a></li>
+                  <li><a href="">Guide Shop</a></li>
+                  <li><a href="">Venda na Riachuelo Marketplace</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="footer__full">
+                <h3>Moda que Transforma</h3>
+                <ul>
+                  <li><a href="">Na prática</a></li>
+                  <li><a href="">Entre Costuras</a></li>
+                  <li><a href="">Jeans Mais Transparente</a></li>
+                  <li><a href="">Ações Covid-19</a></li>
+                  <li><a href="">Free Free</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="footer__full">
+                <h3>Ajuda</h3>
+                <ul>
+                  <li><a href="">Atendimento</a></li>
+                  <li><a href="">Perguntas Frequentes</a></li>
+                  <li><a href="">Trocas e Devoluções</a></li>
+                  <li><a href="">Portal da Privacidade</a></li>
+                  <li><a href="">Política de Privacidade</a></li>
+                  <li><a href="">Termos e Condições de Uso</a></li>
+                  <li><a href="">Regras e Resultados de Sorteios</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="payment">
-        <h3>Formas de Pagamento</h3>
-        <img src="assets/ico-cartao-rchlo1.webp" alt="" />
-        <img src="assets/ico-cartao-rchlo2.webp" alt="" />
-        <img src="assets/ico-cartao-rchlo3.webp" alt="" />
-        <img src="assets/ico-cartao-visa.png" alt="" />
-        <img src="assets/ico-cartao-master.webp" alt="" />
-        <img src="assets/ico-cartao-amex.webp" alt="" />
-        <img src="assets/ico-cartao-diners.png" alt="" />
-        <img src="assets/ico-cartao-elo.png" alt="" />
-        <img src="assets/ico-boleto.webp" alt="" />
-        <img src="assets/ico-paypal.png" alt="" />
+
+      <div class="footer__others container">
+        <div class="footer__payment">
+          <h3>Formas de Pagamento</h3>
+
+          <div class="footer__payment-item">
+            <img src="assets/ico-cartao-rchlo1.webp" alt="" />
+            <img src="assets/ico-cartao-rchlo2.webp" alt="" />
+            <img src="assets/ico-cartao-rchlo3.webp" alt="" />
+            <img src="assets/ico-cartao-visa.png" alt="" />
+            <img src="assets/ico-cartao-master.webp" alt="" />
+            <img src="assets/ico-cartao-amex.webp" alt="" />
+            <img src="assets/ico-cartao-diners.png" alt="" />
+            <img src="assets/ico-cartao-elo.png" alt="" />
+            <img src="assets/ico-boleto.webp" alt="" />
+            <img src="assets/ico-paypal.png" alt="" />
+          </div>
+        </div>
+
+        <div class="footer__social">
+          <h3>Siga a Riachuelo</h3>
+
+          <div class="footer__social-items">
+            <img src="assets/ico-facebook.svg" alt="" />
+
+            <div class="footer__social-item-p first">
+              <img src="assets/ico-instagram.svg" alt="" />
+              <!-- <p>RCHLO</p> -->
+            </div>
+
+            <div class="footer__social-item-p second">
+              <img src="assets/ico-instagram.svg" alt="" />
+              <!-- <p>CASA RCHLO</p> -->
+            </div>
+
+            <img src="assets/ico-pinterest.svg" alt="" />
+            <img src="assets/ico-twitter.svg" alt="" />
+            <img src="assets/ico-youtube.svg" alt="" />
+            <img src="assets/ico-linkedin.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="footer__accessibility">
+          <h3>Acessibilidade</h3>
+          <img src="assets/ico-a11y.webp" alt="" />
+        </div>
       </div>
-      <div class="social">
-        <h3>Siga a Riachuelo</h3>
-        <img src="assets/ico-facebook.svg" alt="" />
-        <img src="assets/ico-instagram.svg" alt="" />
-        <p>RCHLO</p>
-        <img src="assets/ico-instagram.svg" alt="" />
-        <p>CASA RCHLO</p>
-        <img src="assets/ico-pinterest.svg" alt="" />
-        <img src="assets/ico-twitter.svg" alt="" />
-        <img src="assets/ico-youtube.svg" alt="" />
-        <img src="assets/ico-linkedin.svg" alt="" />
-      </div>
-      <div class="accessibility">
-        <h3>Acessibilidade</h3>
-        <img src="assets/ico-a11y.webp" alt="" />
-      </div>
-      <div class="copyright">
+
+      <div class="footer__copyright container">
         <p>
           © Copyright 2017 - 2019. Todos os direitos reservados. Lojas Riachuelo
           S/A. Rua Landri Sales, 1.070, G02 Anexo B, Guarulhos - SP - Brasil CEP
@@ -321,15 +383,17 @@
           “normal”. Preços, promoções, condições de pagamento, valores de frete
           e disponibilidade de estoque são aplicados somente nas compras
           efetuadas na loja online Riachuelo. Existe uma limitação de peças
-          iguais no mesmo pedido que muda de acordo com o tipo de produto. Em
+          iguais no mesmo pedido que muda de acordo com o tipo de produto. <br />Em
           caso de divergência de valores entre a página do produto e a Sacola de
           Compras, a Riachuelo se reserva a garantir o valor exibido na Sacola
           de Compras.
         </p>
-      </div>
-      <div class="complaints">
-        <img src="assets/ra1000.webp" alt="" />
-      </div>
+
+        <div class="complaints">
+          <img src="assets/ra1000.webp" alt="" />
+        </div>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
